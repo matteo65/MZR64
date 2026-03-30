@@ -1,7 +1,7 @@
 /**
  * mzr64
  * 
- * Strong, fast, simple, non-cryptographic 32-bit hash function
+ * Ultra-fast, minimalist, robust pseudo-random number generator (PRNG)
  * 
  * Author: Matteo Zapparoli
  * Date: 2026-04
