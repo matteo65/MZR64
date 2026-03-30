@@ -1,3 +1,18 @@
+/**
+ * mzr64
+ * 
+ * Ultra-fast, minimalist, robust pseudo-random number generator (PRNG)
+ * 
+ * Author: Matteo Zapparoli
+ * Date: 2026-04
+ * Version 1.0
+ *
+ * SPDX-FileCopyrightText: 2026 Matteo Zapparoli
+ * SPDX-License-Identifier: Apache-2.0
+ * See LICENSE file in project root.
+ * 
+ */
+
 #ifndef MZR64_H
 #define MZR64_H
 
