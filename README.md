@@ -155,8 +155,8 @@ The algorithm leverages the **Golden Ratio** (2^64/⌀) for maximum bit diffusio
 Tests performed on x86_64 (i7-10th Gen) using GCC 11.4 (-O3) and OpenJDK 17.
 .
 ## Language	Cycles/Num	Speed (approx)
-C	4.07	~850 Mib/s
-Java	~5.5 - 6.5	~600 Mib/s
+C	4.07	~850 Mib/s  
+Java	~5.5 - 6.5	~600 Mib/s  
 
 ## Usage
 
