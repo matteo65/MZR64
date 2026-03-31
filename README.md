@@ -1,6 +1,6 @@
-# MZR64 PRNG (Minimalist Zap-Rand 64-bit)
+# mzr64 PRNG (Minimalist Zap-Rand 64-bit)
 
-MZR64 is an ultra-fast, minimalist, and thread-safe pseudo-random number generator (PRNG) designed for high-performance applications, simulations, and games.
+mzr64 is an ultra-fast, minimalist, and thread-safe pseudo-random number generator (PRNG) designed for high-performance applications, simulations, and games.
 
 ## Features
 - **High Performance**: Extremely efficient, averaging **~4.07 cycles per number** on modern x86_64 architectures.
@@ -16,7 +16,7 @@ MZR64 uses a cross-coupled mixing technique. It evolves a linear counter (LCG) u
 
 | Algorithm | Cycles/Number (lower is better) | Bit Size |
 |-----------|---------------------------------|----------|
-| **MZR64** | **4.07**                        | 64-bit   |
+| **mzr64** | **4.07**                        | 64-bit   |
 | SplitMix64| ~4.2 - 5.0                      | 64-bit   |
 | PCG64     | ~5.5 - 7.0                      | 64-bit   |
 
