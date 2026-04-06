@@ -1,3 +1,15 @@
+/*
+ * speed_mizar64.c
+ *
+ * Version: 1.0
+ * Date: 2026-04-01
+ * Author: Matteo Zapparoli
+ *
+ * Speed benchmark in Cycles Per Number of mizar64 PRNG
+ *
+ * Compile: gcc -O3 -I.. speed_mizar64.c ../mizar64.o -o speed_mizar64
+ *
+ */
 #include <stdio.h>
 #include <stdint.h>
 #include <x86intrin.h> // Necessario per __rdtsc()
