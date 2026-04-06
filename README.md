@@ -2,21 +2,24 @@
 
 Mizar64 is an ultra-fast, minimalist, robust pseudo-random number generator (PRNG) designed for high-performance applications, simulations, and games.
 
+## Period
+The internal state is 128 bits, but the algorithm's design limits the effective state space for cycling. Current estimates place the period around 2^80–2^90.
+
 ## Features
-- **High Performance**: Extremely efficient, averaging **~4.07 cycles per number** on modern x86_64 architectures.
+- **High Performance**: Extremely efficient, averaging **~4.2 cycles per number** on modern x86_64 architectures.
 - **Statistical Robustness**: Successfully passes the **Dieharder** battery of tests with excellent p-values.
 - **Minimal Footprint**: Only two 64-bit state variables and a few lines of code.
 - **Thread-Safe**: Supports reentrant calls via a state structure (`mizar64_state_t`).
 - **Deterministic**: Provides consistent results across different platforms using 64-bit constants.
 
 ## Algorithm Logic
-Mizar64 uses a cross-coupled mixing technique. It evolves a linear counter (LCG) using the **Golden Ratio** and a **Weyl sequence**, then applies a non-linear mixing phase involving 32-bit XOR-rotations and a final multiplication to ensure maximum bit diffusion.
+Mizar64 uses a cross-coupled mixing technique. It evolves a linear counter (LCG), then applies a non-linear mixing phase involving 32-bit XOR-rotations and a final multiplication to ensure maximum bit diffusion.
 
 ## Performance Benchmark
 
 | Algorithm | Cycles/Number (lower is better) | Bit Size |
 |-----------|---------------------------------|----------|
-|**Mizar64**| **4.07**                        | 64-bit   |
+|**Mizar64**| **4.2**                        | 64-bit   |
 | SplitMix64| ~4.2 - 5.0                      | 64-bit   |
 | PCG64     | ~5.5 - 7.0                      | 64-bit   |
 
