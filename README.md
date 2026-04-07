@@ -21,6 +21,7 @@ This table summarizes the results.
 ```
  # | Tools              | Seed c      | Seed x    | File output            | Results
   1|dieharder -a -g 200 | defalut     | default   | test_01_dieharder.txt  | 110 PASSED, 4 WEAK
+  2|dieharder -a -g 200 | 0           | 0         | test_02_dieharder.txt  | 114 PASSED
 
 ```
 
