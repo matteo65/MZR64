@@ -19,8 +19,8 @@ Numerous tests were performed with four different tools: Dieharder, RNG_test (Pr
 The results of each test are available in the project's src/C/test directory.  
 This table summarizes the results.
 
- # | Tools              | Seed c      | Seed x      | File output          | Results
- --|--------------------|-------------|-------------|----------------------|------------------
+ n | Tools              | Seed c      | Seed x      | File output          | Results
+ --+--------------------+-------------+-------------+----------------------+------------------
   1|dieharder -a -g 200 |defalut      |default      |test_01_dieharder.txt |110 PASSED, 4 WEAK
   2|dieharder -a -g 200 |0            |0            |test_02_dieharder.txt |114 PASSED
   3|dieharder -a -g 200 |123456789    |987654321    |test_03_dieharder.txt |110 PASSED, 4 WEAK
