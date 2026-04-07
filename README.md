@@ -16,8 +16,14 @@ Mizar64 uses a cross-coupled mixing technique. It evolves a linear counter (LCG)
 
 ## Performance Benchmark
 Numerous tests were performed with four different tools: Dieharder, RNG_test (PractRand), SmallCrash (TestU01), and BigCrash (TestU01).
-The results of each test are available in the project's test directory.
+The results of each test are available in the project's test directory.  
 This table summarizes the results.
+```
+ # | Tools              | Seed c      | Seed x    | File output            | Results
+  1|dieharder -a -g 200 | defalut     | default   | test_01_dieharder.txt  | 110 PASSED, 4 WEAK
+
+```
+
 
 ## Language	Cycles/Num	Speed (approx)
 
