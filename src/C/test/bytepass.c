@@ -6,7 +6,7 @@
  * Author: Matteo Zapparoli
  *
  * Binary byte stream filter.
- * Usefull for filter the half lower/higer bytes in a byte stream
+ * Usefull for filter the half lower/higer bytes in a bytes stream
  *
  * Compile: gcc -O3 bytepass.c -o bytepass
  *
@@ -34,7 +34,7 @@ void usage(void)
 
 int main(int argc, char *argv[])
 {
-	if(argc < 1 ) {
+	if(argc == 1 ) {
 		usage();
 		return 0;
 	}
