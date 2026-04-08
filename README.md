@@ -25,7 +25,7 @@ The tests are executed on
 The results of each test are available in the project's src/C/test directory.  
 This table summarizes the results.
 
-  n.| Tools              | Seed c      | Seed x      | File output          | Results  
+  n.| Tool               | Seed c      | Seed x      | File output          | Result  
  --:|:---                |:---         |:---         |:---                  |:---
    1|dieharder -a -g 200 |12345        |67890        |test_01_dieharder.txt |112 PASSED, 2 WEAK  
    2|dieharder -a -g 200 |0            |0            |test_02_dieharder.txt |114 PASSED  
@@ -36,7 +36,7 @@ This table summarizes the results.
 ### Tests on the 4 lower bytes
 These are the results of statistical analysis applied to the lowest 4 bytes
 
-  n.| Tools              | Seed c      | Seed x      | File output          | Results  
+  n.| Tool               | Seed c      | Seed x      | File output          | Result  
  --:|:---                |:---         |:---         |:---                  |:---
   30|dieharder -a -g 200 |12345        |67890        |test_30_dieharder.txt |112 PASSED, 2 WEAK
   31|dieharder -a -g 200 |0            |0            |test_31_dieharder.txt |113 PASSED, 1 WEAK
@@ -46,10 +46,12 @@ These are the results of statistical analysis applied to the lowest 4 bytes
 ### Tests on the 4 higher bytes
 These are the results of statistical analysis applied to the highest 4 bytes
 
-  n.| Tools              | Seed c      | Seed x      | File output          | Results  
+  n.| Tool               | Seed c      | Seed x      | File output          | Result  
  --:|:---                |:---         |:---         |:---                  |:---
   60|dieharder -a -g 200 |12345        |67890        |test_60_dieharder.txt |110 PASSED, 4 WEAK
   61|dieharder -a -g 200 |0            |0            |test_61_dieharder.txt |109 PASSED, 5 WEAK
+  62|dieharder -a -g 200 |123456789    |987654321    |test_62_dieharder.txt |114 PASSED
+  63|dieharder -a -g 200 |max uint64_t |max uint64_t |test_63_dieharder.txt |111 PASSED, 3 WEAK
 
 
 ## Language	Cycles/Num	Speed (approx)
