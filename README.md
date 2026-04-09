@@ -16,8 +16,8 @@ Mizar64 uses a cross-coupled mixing technique. It evolves a linear counter (LCG)
 
 ## Performance Benchmark
 Numerous tests were performed with four different tools: Dieharder, RNG_test (PractRand), SmallCrash (TestU01), and BigCrash (TestU01).
-- Dieharder v. 3.31.1
-- RNG_test (PractRand - SourceForge) v. 0.96 (compiler g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0)
+- **Dieharder v. 3.31.1**
+- **RNG_test v. 0.96** (PractRand - SourceForge) (compiler: g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0)
 
 The tests are executed on
 - Linux mzpc2023 6.6.87.2-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
