@@ -13,8 +13,8 @@ package org.mizar64;
  */
 public class Mizar64 {
     
-    public static final long MIZAR64_DEFAULT_SEED_C = 0x0123456789abcdefL;
-    public static final long MIZAR64_DEFAULT_SEED_X = 0xfedcba9876543201L;
+    public static final long MIZAR64_DEFAULT_SEED_C = 0L;
+    public static final long MIZAR64_DEFAULT_SEED_X = 0L;
     
     /**
      * Internal counter state
