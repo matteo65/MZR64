@@ -15,7 +15,7 @@ The internal state is 128 bits, but the algorithm's design limits the effective 
 Mizar64 uses a cross-coupled mixing technique. It evolves a linear counter (LCG), then applies a non-linear mixing phase involving 32-bit XOR-rotations and a final multiplication to ensure maximum bit diffusion.
 
 ## Performance Benchmark
-Numerous tests were performed with four different tools: Dieharder, RNG_test (PractRand), SmallCrash (TestU01), and BigCrash (TestU01).
+Numerous tests were performed with different tools:
 - **Dieharder v. 3.31.1**
 - **RNG_test v. 0.96** (PractRand - SourceForge) (compiler: g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0)
 - **SmokeRand v. 0.46** gcc-linux64
