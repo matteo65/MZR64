@@ -31,6 +31,7 @@ This table summarizes the results.
    6|smokerand full stdin64|0          |0            |test_06.smokerand.txt|Passed: 50/50, Suspicious: 0, Failed: 0
    7|smokerand full stdin64|123        |456          |test_07.smokerand.txt|Passed: 49/50, Suspicious: 1, Failed: 0
    8|smokerand full stdin64|123456789  |987654321    |test_08.smokerand.txt|Passed: 49/50, Suspicious: 1, Failed: 0
+   9|smokerand full stdin64|max uint64_t|max uint64_t|test_09_rng_test.txt| Passed: 49/50, Suspicious: 1, Failed: 0
    
 
 ### Tests on the 4 lower bytes
