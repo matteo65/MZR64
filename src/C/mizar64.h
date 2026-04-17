@@ -20,8 +20,7 @@
 
 #define MIZAR64_VERSION 100 // Version 1.0.0
 
-#define MIZAR64_DEFAULT_SEED_C 0
-#define MIZAR64_DEFAULT_SEED_X 0
+#define MIZAR64_DEFAULT_SEED 0
 
 #ifdef __cplusplus
 extern "C" {
@@ -29,7 +28,7 @@ extern "C" {
 
 /* mizar64 State structure */
 typedef struct {
-    uint64_t c; // Internal counter
+    uint64_t c; // Internal counter, must be initialized to 1!!!
     uint64_t x; // Mixing state
 } mizar64_state_t;
 
