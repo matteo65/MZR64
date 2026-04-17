@@ -26,7 +26,7 @@ public class Mizar64 {
     private long state_x;
     
     public Mizar64(long seed) {
-        this.state_c = 1
+        this.state_c = 1;
         this.state_x = seed;
     }
     
