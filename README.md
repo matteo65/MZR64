@@ -2,7 +2,6 @@
 Mizar64 is an ultra-fast, minimalist, robust pseudo-random number generator (PRNG) designed for high-performance applications, simulations, and games. 
 
 ## Period
-The internal state is 128 bits, but the algorithm's design limits the effective state space for cycling. Current estimates place the period around 2<sup>94</sup>.
 
 ## Features
 
@@ -17,57 +16,12 @@ Numerous tests were performed with different tools:
 
 The tests are executed on
 - Linux mzpc2023 6.6.87.2-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
-  
-The reports of each test are available in the project's src/C/test directory.  
-This table summarizes the results.
-
-  n.| Tool               | Seed c      | Seed x      | Report          | Result  
- --:|:---                |:---         |:---         |:---                  |:---
-   1|dieharder -a -g 200 |12345        |67890        |test_01_dieharder.txt |112 PASSED, 2 WEAK  
-   2|dieharder -a -g 200 |0            |0            |test_02_dieharder.txt |114 PASSED  
-   3|dieharder -a -g 200 |123456789    |987654321    |test_03_dieharder.txt |110 PASSED, 4 WEAK  
-   4|dieharder -a -g 200 |max uint64_t |max uint64_t |test_04_dieharder.txt |112 PASSED, 2 WEAK
-   5|RNG_test stdin64 -tlmin 4GB|123456789|987654321 |test_05_rng_test.txt| length from 4GB to 32TB, no anomalies in 455 test
-   6|smokerand full stdin64|0          |0            |test_06_smokerand.txt|Passed: 50/50, Suspicious: 0, Failed: 0
-   7|smokerand full stdin64|123        |456          |test_07_smokerand.txt|Passed: 49/50, Suspicious: 1, Failed: 0
-   8|smokerand full stdin64|123456789  |987654321    |test_08_smokerand.txt|Passed: 49/50, Suspicious: 1, Failed: 0
-   9|smokerand full stdin64|max uint64_t|max uint64_t|test_09_smokerand.txt|Passed: 49/50, Suspicious: 1, Failed: 0
-   
-
-### Tests on the 4 lower bytes
-These are the results of statistical analysis applied to the lowest 4 bytes
-
-  n.| Tool               | Seed c      | Seed x      | Report          | Result  
- --:|:---                |:---         |:---         |:---                  |:---
-  30|dieharder -a -g 200 |12345        |67890        |test_30_dieharder.txt |112 PASSED, 2 WEAK
-  31|dieharder -a -g 200 |0            |0            |test_31_dieharder.txt |113 PASSED, 1 WEAK
-  32|dieharder -a -g 200 |123456789    |987654321    |test_32_dieharder.txt |112 PASSED, 2 WEAK
-  33|dieharder -a -g 200 |max uint64_t |max uint64_t |test_33_dieharder.txt |114 PASSED, 1 WEAK
-  34|smokerand full stdin32|0          |0            |test_34_smokerand.txt |Passed: 50/50, Suspicious: 0, Failed: 0
-  35|RNG_test stdin32 -tlmin 1GB|12345 |67890        |test_35_rng_test.txt  |length from 1GB to 32TB, no anomalies in 304 test
-  
-### Tests on the 4 higher bytes
-These are the results of statistical analysis applied to the highest 4 bytes
-
-  n.| Tool               | Seed c      | Seed x      | Report          | Result  
- --:|:---                |:---         |:---         |:---                  |:---
-  60|dieharder -a -g 200 |12345        |67890        |test_60_dieharder.txt |110 PASSED, 4 WEAK
-  61|dieharder -a -g 200 |0            |0            |test_61_dieharder.txt |109 PASSED, 5 WEAK
-  62|dieharder -a -g 200 |123456789    |987654321    |test_62_dieharder.txt |114 PASSED
-  63|dieharder -a -g 200 |max uint64_t |max uint64_t |test_63_dieharder.txt |111 PASSED, 3 WEAK
-  64|smokerand full stdin32|0          |0            |test_64_smokerand.txt |Passed: 50/50, Suspicious: 0, Failed: 0
-  65|smokerand full stdin32|12345      |67890        |test_65_smokerand.txt |Passed: 49/50, Suspicious: 1, Failed: 0
-
 
 ## Language	Cycles/Num	Speed (approx)
 
 ## Usage
 
 ## Compilation
-You can compile the library with any C99+ compiler:
-```bash
-gcc -O3 mizar64.c your_project.c -o your_project
-```
 
 ## Versioning
 Current Version: 1.0.0 (MIZAR64_VERSION 100)
