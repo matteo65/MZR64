@@ -45,7 +45,7 @@ All runs scored a quality of 4 (good) on a scale from 0 to 4.
 |09|9243983136210913915 |       -         |
 |10|353607324833234878  |       -         |
 |11|1                   |       -         |
-|12|MAX_UINT64          |       -         |
+|12|UINT64_MAX          |       -         |
 
 ## PractRand v.0.96 Tests
 We used [PractRand](https://pracrand.sourceforge.net/) version **0.96** with 64-bit input. We performed 12 runs from **1GB** to **64TB**.  
