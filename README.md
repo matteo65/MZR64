@@ -14,6 +14,7 @@ uint64_t mizar64(uint64_t *state)
 **State**: 64 bit  
 **Output**: 64 bit  
 **Seed**: all 64-bit values ​​except 0  
+**Collisions**: No (mizar64 generates no duplicate values)
 
 ## Tools
 The [tools/](https://github.com/matteo65/Mizar64/tree/main/tools) directory contains the programs used to run quality and speed tests; they are:
@@ -232,6 +233,16 @@ Minimum p-value: **1.7e-5**
 |**Expected**|**32.0**|**32.0**|**32.0**|
 
 ### Interval p-value distribution
+This table summarizes the distribution of anomalous p-values by order of magnitude.  
+For p-values close to **0**, the p-value itself is used. For p-values close to **1**, the residual value **(1 − p)** is used instead. In other words, all anomalies are measured by their distance from the nearest distribution boundary (0 or 1).  
+Examples:  
+- p = 0.00042 → residual value = 0.00042
+- p = 0.99958 → residual value = 0.00042
+- p = 0.999991 → residual value = 9.0 × 10⁻⁶
+
+This normalization allows upper-tail and lower-tail anomalies to be analyzed together and compared within the same magnitude intervals.  
+For a perfectly random generator, the residual values are expected to follow a uniform distribution, implying that the number of anomalies should decrease by approximately a factor of ten for each successive interval.
+
 |p-value Interval|Found|**Expected**|
 |----------------|-----|--------|
 |[1.0e-4, 1.0e-3)|83|**86.4**|
