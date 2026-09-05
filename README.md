@@ -9,7 +9,7 @@ uint64_t mizar64(uint64_t *state)
 }
 ```
 
-**Important note**: mizar64 is now deprecated as it has been replaced by its evolution: [sirius64](https://github.com/matteo65/Sirius64)
+## Important note: mizar64 is now deprecated as it has been replaced by its evolution: [sirius64](https://github.com/matteo65/Sirius64)
 
 ## Features
 **Period**: from ($2^{62} - 1$) to ($2^{64} - 1$) depending on seed  
